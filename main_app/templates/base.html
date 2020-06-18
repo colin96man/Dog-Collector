@@ -11,14 +11,15 @@
 </head>
 <body>
   <header class="navbar-fixed">
-    <nav>
-      <div id="nav-color" class="nav-wrapper">
+    <nav class="purple" >
+      <div class="nav-wrapper">
         <ul>
           <li><a href="/" class="left brand-logo">&nbsp;&nbsp;DogCollector</a></li>
         </ul>
         <ul class="right">
-          <li><a href="/about">About</a></li>
-          <li><a href="/dogs">View All My Dogs</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'dogs_create' %}">Add a Dog</a></li>
+          <li><a href="{% url 'index' %}">View All My Dogs</a></li>
         </ul>
       </div>
     </nav>
@@ -27,8 +28,8 @@
     {% block content %}
     {% endblock %}
   </main>
-  <footer id="footer-color" class="page-footer">
-    <div class="right">All Rights Reserved, &copy; 2019 Dog Collector &nbsp;</div>
+  <footer class="purple" class="page-footer">
+    <div class="right white-text">All Rights Reserved, &copy; 2020 Dog Collector &nbsp;</div>
   </footer>
 </body>
 </html>
