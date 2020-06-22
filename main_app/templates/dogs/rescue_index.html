@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Colorado Rescue List</h1>
+
+{% for co_organization in co_organizations %}
+<div class="card">
+  <!-- add this single line below -->
+    <div class="card-content">
+      <span class="card-title">{{ co_organization.name }}</span>
+      <p>Location: {{ co_organization.location }}</p>
+      <p>Email: {{ co_organization.email }}</p>
+    </div>
+  <!-- and this following one as well -->
+  </a>
+</div>
+{% endfor %}
+
+{% endblock %}
